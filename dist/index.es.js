@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 import { createElement, forwardRef, Fragment, PureComponent } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
+import { withStyles } from '@mui/material';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import clsx from 'clsx';
@@ -23,7 +23,6 @@ import Grid from '@mui/material/Grid';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import SnackbarContent from '@mui/material/SnackbarContent';
-import { withStyles as withStyles$1 } from '@mui/styles';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CloseIcon from '@mui/icons-material/Close';
 import ErrorIcon from '@mui/icons-material/Error';
@@ -118,37 +117,37 @@ var styles = function styles(_ref) {
   return {
     root: {},
     imageContainer: {
-      position: 'relative',
+      position: "relative",
       zIndex: 10,
-      textAlign: 'center',
-      '&:hover $image': {
+      textAlign: "center",
+      "&:hover $image": {
         opacity: 0.3
       },
-      '&:hover $removeButton': {
+      "&:hover $removeButton": {
         opacity: 1
       }
     },
     image: {
       height: 100,
-      width: 'initial',
-      maxWidth: '100%',
+      width: "initial",
+      maxWidth: "100%",
       color: palette === null || palette === void 0 ? void 0 : (_palette$text = palette.text) === null || _palette$text === void 0 ? void 0 : _palette$text.primary,
-      transition: 'all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms',
-      boxSizing: 'border-box',
-      boxShadow: 'rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px',
+      transition: "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
+      boxSizing: "border-box",
+      boxShadow: "rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px",
       borderRadius: shape === null || shape === void 0 ? void 0 : shape.borderRadius,
       zIndex: 5,
       opacity: 1
     },
     removeButton: {
-      transition: '.5s ease',
-      position: 'absolute',
+      transition: ".5s ease",
+      position: "absolute",
       opacity: 0,
       top: spacing === null || spacing === void 0 ? void 0 : spacing(-1),
       right: spacing === null || spacing === void 0 ? void 0 : spacing(-1),
       width: 40,
       height: 40,
-      '&:focus': {
+      "&:focus": {
         opacity: 1
       }
     }
@@ -180,7 +179,7 @@ function PreviewList(_ref2) {
 
       return /*#__PURE__*/createElement(Grid, _extends({}, previewGridProps.item, {
         item: true,
-        key: "".concat((_fileObject$file$name = (_fileObject$file = fileObject.file) === null || _fileObject$file === void 0 ? void 0 : _fileObject$file.name) !== null && _fileObject$file$name !== void 0 ? _fileObject$file$name : 'file', "-").concat(i),
+        key: "".concat((_fileObject$file$name = (_fileObject$file = fileObject.file) === null || _fileObject$file === void 0 ? void 0 : _fileObject$file.name) !== null && _fileObject$file$name !== void 0 ? _fileObject$file$name : "file", "-").concat(i),
         className: classes.imageContainer
       }), /*#__PURE__*/createElement(Chip, _extends({
         variant: "outlined"
@@ -203,7 +202,7 @@ function PreviewList(_ref2) {
       xs: 4
     }, previewGridProps.item, {
       item: true,
-      key: "".concat((_fileObject$file$name2 = (_fileObject$file2 = fileObject.file) === null || _fileObject$file2 === void 0 ? void 0 : _fileObject$file2.name) !== null && _fileObject$file$name2 !== void 0 ? _fileObject$file$name2 : 'file', "-").concat(i),
+      key: "".concat((_fileObject$file$name2 = (_fileObject$file2 = fileObject.file) === null || _fileObject$file2 === void 0 ? void 0 : _fileObject$file2.name) !== null && _fileObject$file$name2 !== void 0 ? _fileObject$file$name2 : "file", "-").concat(i),
       className: clsx(classes.imageContainer, previewGridClasses.item)
     }), getPreviewIcon(fileObject, classes), showFileNames && /*#__PURE__*/createElement(Typography, {
       variant: "body1",
@@ -228,7 +227,7 @@ process.env.NODE_ENV !== "production" ? PreviewList.propTypes = {
   useChipsForPreview: PropTypes.bool
 } : void 0;
 var PreviewList$1 = withStyles(styles, {
-  name: 'MuiDropzonePreviewList'
+  name: "MuiDropzonePreviewList"
 })(PreviewList);
 
 var variantIcon = {
@@ -255,9 +254,9 @@ var styles$1 = function styles(theme) {
       backgroundColor: theme === null || theme === void 0 ? void 0 : (_theme$palette4 = theme.palette) === null || _theme$palette4 === void 0 ? void 0 : (_theme$palette4$warni = _theme$palette4.warning) === null || _theme$palette4$warni === void 0 ? void 0 : _theme$palette4$warni.main
     },
     message: {
-      display: 'flex',
-      alignItems: 'center',
-      '& > svg': {
+      display: "flex",
+      alignItems: "center",
+      "& > svg": {
         marginRight: theme === null || theme === void 0 ? void 0 : (_theme$spacing = theme.spacing) === null || _theme$spacing === void 0 ? void 0 : _theme$spacing.call(theme, 1)
       }
     },
@@ -304,11 +303,11 @@ process.env.NODE_ENV !== "production" ? SnackbarContentWrapper.propTypes = {
   className: PropTypes.string,
   message: PropTypes.node,
   onClose: PropTypes.func,
-  variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired
+  variant: PropTypes.oneOf(["success", "warning", "error", "info"]).isRequired
 } : void 0;
 SnackbarContentWrapper.displayName = "SnackbarContentWrapper";
-var SnackbarContentWrapper$1 = withStyles$1(styles$1, {
-  name: 'MuiDropzoneSnackbar'
+var SnackbarContentWrapper$1 = withStyles(styles$1, {
+  name: "MuiDropzoneSnackbar"
 })(SnackbarContentWrapper);
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
@@ -322,32 +321,32 @@ var styles$2 = function styles(_ref) {
       shape = _ref.shape,
       spacing = _ref.spacing;
   return {
-    '@keyframes progress': {
-      '0%': {
-        backgroundPosition: '0 0'
+    "@keyframes progress": {
+      "0%": {
+        backgroundPosition: "0 0"
       },
-      '100%': {
-        backgroundPosition: '-70px 0'
+      "100%": {
+        backgroundPosition: "-70px 0"
       }
     },
     root: {
-      position: 'relative',
-      width: '100%',
-      minHeight: '250px',
+      position: "relative",
+      width: "100%",
+      minHeight: "250px",
       backgroundColor: palette === null || palette === void 0 ? void 0 : (_palette$background = palette.background) === null || _palette$background === void 0 ? void 0 : _palette$background.paper,
-      border: 'dashed',
+      border: "dashed",
       borderColor: palette === null || palette === void 0 ? void 0 : palette.divider,
       borderRadius: shape === null || shape === void 0 ? void 0 : shape.borderRadius,
-      boxSizing: 'border-box',
-      cursor: 'pointer',
-      overflow: 'hidden'
+      boxSizing: "border-box",
+      cursor: "pointer",
+      overflow: "hidden"
     },
     active: {
-      animation: '$progress 2s linear infinite !important',
+      animation: "$progress 2s linear infinite !important",
       // eslint-disable-next-line max-len
       backgroundImage: "repeating-linear-gradient(-45deg, ".concat(palette === null || palette === void 0 ? void 0 : (_palette$background2 = palette.background) === null || _palette$background2 === void 0 ? void 0 : _palette$background2.paper, ", ").concat(palette === null || palette === void 0 ? void 0 : (_palette$background3 = palette.background) === null || _palette$background3 === void 0 ? void 0 : _palette$background3.paper, " 25px, ").concat(palette === null || palette === void 0 ? void 0 : palette.divider, " 25px, ").concat(palette === null || palette === void 0 ? void 0 : palette.divider, " 50px)"),
-      backgroundSize: '150% 100%',
-      border: 'solid',
+      backgroundSize: "150% 100%",
+      border: "solid",
       borderColor: palette === null || palette === void 0 ? void 0 : (_palette$primary = palette.primary) === null || _palette$primary === void 0 ? void 0 : _palette$primary.light
     },
     invalid: {
@@ -356,7 +355,7 @@ var styles$2 = function styles(_ref) {
       borderColor: palette === null || palette === void 0 ? void 0 : (_palette$error5 = palette.error) === null || _palette$error5 === void 0 ? void 0 : _palette$error5.main
     },
     textContainer: {
-      textAlign: 'center'
+      textAlign: "center"
     },
     text: {
       marginBottom: spacing === null || spacing === void 0 ? void 0 : spacing(3),
@@ -371,8 +370,8 @@ var styles$2 = function styles(_ref) {
 };
 
 var defaultSnackbarAnchorOrigin = {
-  horizontal: 'left',
-  vertical: 'bottom'
+  horizontal: "left",
+  vertical: "bottom"
 };
 
 var defaultGetPreviewIcon = function defaultGetPreviewIcon(fileObject, classes) {
@@ -410,8 +409,8 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
     _this = _super.call.apply(_super, [this].concat(args));
     _this.state = {
       openSnackBar: false,
-      snackbarMessage: '',
-      snackbarVariant: 'success'
+      snackbarMessage: "",
+      snackbarVariant: "success"
     };
 
     _this.handleDropAccepted = /*#__PURE__*/function () {
@@ -432,7 +431,7 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
                 _this.setState({
                   openSnackBar: true,
                   snackbarMessage: getFileLimitExceedMessage(filesLimit),
-                  snackbarVariant: 'error'
+                  snackbarVariant: "error"
                 }, _this.notifyAlert);
 
                 return _context2.abrupt("return");
@@ -486,12 +485,12 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
 
                 message = fileObjs.reduce(function (msg, fileObj) {
                   return msg + getFileAddedMessage(fileObj.file.name);
-                }, '');
+                }, "");
 
                 _this.setState({
                   openSnackBar: true,
                   snackbarMessage: message,
-                  snackbarVariant: 'success'
+                  snackbarVariant: "success"
                 }, _this.notifyAlert);
 
               case 11:
@@ -516,7 +515,7 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
           getFileLimitExceedMessage = _this$props2.getFileLimitExceedMessage,
           maxFileSize = _this$props2.maxFileSize,
           onDropRejected = _this$props2.onDropRejected;
-      var message = '';
+      var message = "";
 
       if (fileObjects.length + rejectedFiles.length > filesLimit) {
         message = getFileLimitExceedMessage(filesLimit);
@@ -533,7 +532,7 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
       _this.setState({
         openSnackBar: true,
         snackbarMessage: message,
-        snackbarVariant: 'error'
+        snackbarVariant: "error"
       }, _this.notifyAlert);
     };
 
@@ -554,7 +553,7 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
         _this.setState({
           openSnackBar: true,
           snackbarMessage: getFileRemovedMessage(removedFileObj.file.name),
-          snackbarVariant: 'info'
+          snackbarVariant: "info"
         }, _this.notifyAlert);
       };
     };
@@ -615,7 +614,7 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
           openSnackBar = _this$state2.openSnackBar,
           snackbarMessage = _this$state2.snackbarMessage,
           snackbarVariant = _this$state2.snackbarVariant;
-      var acceptFiles = acceptedFiles === null || acceptedFiles === void 0 ? void 0 : acceptedFiles.join(',');
+      var acceptFiles = acceptedFiles === null || acceptedFiles === void 0 ? void 0 : acceptedFiles.join(",");
       var isMultiple = filesLimit > 1;
       var previewsVisible = showPreviews && fileObjects.length > 0;
       var previewsInDropzoneVisible = showPreviewsInDropzone && fileObjects.length > 0;
@@ -664,7 +663,7 @@ var DropzoneAreaBase = /*#__PURE__*/function (_React$PureComponent) {
         previewChipProps: previewChipProps,
         previewGridClasses: previewGridClasses,
         previewGridProps: previewGridProps
-      })), (typeof showAlerts === 'boolean' && showAlerts || Array.isArray(showAlerts) && showAlerts.includes(snackbarVariant)) && /*#__PURE__*/createElement(Snackbar, _extends({
+      })), (typeof showAlerts === "boolean" && showAlerts || Array.isArray(showAlerts) && showAlerts.includes(snackbarVariant)) && /*#__PURE__*/createElement(Snackbar, _extends({
         anchorOrigin: defaultSnackbarAnchorOrigin,
         autoHideDuration: 6000
       }, alertSnackbarProps, {
@@ -686,8 +685,8 @@ DropzoneAreaBase.defaultProps = {
   filesLimit: 3,
   fileObjects: [],
   maxFileSize: 3000000,
-  dropzoneText: 'Drag and drop a file here or click',
-  previewText: 'Preview:',
+  dropzoneText: "Drag and drop a file here or click",
+  previewText: "Preview:",
   disableRejectionFeedback: false,
   showPreviews: false,
   // By default previews show up under in the dialog and inside in the standalone
@@ -701,8 +700,8 @@ DropzoneAreaBase.defaultProps = {
   showAlerts: true,
   alertSnackbarProps: {
     anchorOrigin: {
-      horizontal: 'left',
-      vertical: 'bottom'
+      horizontal: "left",
+      vertical: "bottom"
     },
     autoHideDuration: 6000
   },
@@ -720,11 +719,11 @@ DropzoneAreaBase.defaultProps = {
     var message = "File ".concat(rejectedFile.name, " was rejected. ");
 
     if (!acceptedFiles.includes(rejectedFile.type)) {
-      message += 'File type not supported. ';
+      message += "File type not supported. ";
     }
 
     if (rejectedFile.size > maxFileSize) {
-      message += 'File is too big. Size limit is ' + convertBytesToMbsOrKbs(maxFileSize) + '. ';
+      message += "File is too big. Size limit is " + convertBytesToMbsOrKbs(maxFileSize) + ". ";
     }
 
     return message;
@@ -816,7 +815,7 @@ process.env.NODE_ENV !== "production" ? DropzoneAreaBase.propTypes = {
    *  - showAlerts={['error', 'success', 'info']} is same as showAlerts={true}.
    *  - showAlerts={[]} is same as showAlerts={false}.
    */
-  showAlerts: PropTypes.oneOfType([PropTypes.bool, PropTypes.arrayOf(PropTypes.oneOf(['error', 'success', 'info']))]),
+  showAlerts: PropTypes.oneOfType([PropTypes.bool, PropTypes.arrayOf(PropTypes.oneOf(["error", "success", "info"]))]),
 
   /**
    * Props to pass to the Material-UI Snackbar components.<br/>Requires `showAlerts` prop to be `true`.
@@ -927,7 +926,7 @@ process.env.NODE_ENV !== "production" ? DropzoneAreaBase.propTypes = {
   onAlert: PropTypes.func
 } : void 0;
 var DropzoneAreaBase$1 = withStyles(styles$2, {
-  name: 'MuiDropzoneArea'
+  name: "MuiDropzoneArea"
 })(DropzoneAreaBase);
 
 function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
