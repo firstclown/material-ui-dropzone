@@ -138,4 +138,4 @@ PreviewList.propTypes = {
   useChipsForPreview: PropTypes.bool,
 };
 
-export default styled(styles, { name: "MuiDropzonePreviewList" })(PreviewList);
+export default styled(PreviewList, { name: "MuiDropzonePreviewList" })(styles);

@@ -226,9 +226,9 @@ process.env.NODE_ENV !== "production" ? PreviewList.propTypes = {
   showFileNames: PropTypes.bool,
   useChipsForPreview: PropTypes.bool
 } : void 0;
-var PreviewList$1 = styled(styles, {
+var PreviewList$1 = styled(PreviewList, {
   name: "MuiDropzonePreviewList"
-})(PreviewList);
+})(styles);
 
 var variantIcon = {
   success: CheckCircleIcon,
@@ -306,9 +306,9 @@ process.env.NODE_ENV !== "production" ? SnackbarContentWrapper.propTypes = {
   variant: PropTypes.oneOf(["success", "warning", "error", "info"]).isRequired
 } : void 0;
 SnackbarContentWrapper.displayName = "SnackbarContentWrapper";
-var SnackbarContentWrapper$1 = styled(styles$1, {
+var SnackbarContentWrapper$1 = styled(SnackbarContentWrapper, {
   name: "MuiDropzoneSnackbar"
-})(SnackbarContentWrapper);
+})(styles$1);
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 
@@ -925,9 +925,9 @@ process.env.NODE_ENV !== "production" ? DropzoneAreaBase.propTypes = {
    */
   onAlert: PropTypes.func
 } : void 0;
-var DropzoneAreaBase$1 = styled(styles$2, {
+var DropzoneAreaBase$1 = styled(DropzoneAreaBase, {
   name: "MuiDropzoneArea"
-})(DropzoneAreaBase);
+})(styles$2);
 
 function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
 

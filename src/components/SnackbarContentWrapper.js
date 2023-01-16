@@ -85,6 +85,6 @@ SnackbarContentWrapper.propTypes = {
 
 SnackbarContentWrapper.displayName = "SnackbarContentWrapper";
 
-export default styled(styles, { name: "MuiDropzoneSnackbar" })(
-  SnackbarContentWrapper
-);
+export default styled(SnackbarContentWrapper, {
+  name: "MuiDropzoneSnackbar",
+})(styles);

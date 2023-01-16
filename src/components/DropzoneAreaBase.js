@@ -568,4 +568,4 @@ DropzoneAreaBase.propTypes = {
   onAlert: PropTypes.func,
 };
 
-export default styled(styles, { name: "MuiDropzoneArea" })(DropzoneAreaBase);
+export default styled(DropzoneAreaBase, { name: "MuiDropzoneArea" })(styles);
