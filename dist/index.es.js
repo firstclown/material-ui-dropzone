@@ -20,7 +20,7 @@ import Chip from '@mui/material/Chip';
 import Fab from '@mui/material/Fab';
 import Grid from '@mui/material/Grid';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { styled, withStyles } from '@mui/material';
+import { styled } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import SnackbarContent from '@mui/material/SnackbarContent';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -306,7 +306,7 @@ process.env.NODE_ENV !== "production" ? SnackbarContentWrapper.propTypes = {
   variant: PropTypes.oneOf(["success", "warning", "error", "info"]).isRequired
 } : void 0;
 SnackbarContentWrapper.displayName = "SnackbarContentWrapper";
-var SnackbarContentWrapper$1 = withStyles(styles$1, {
+var SnackbarContentWrapper$1 = styled(styles$1, {
   name: "MuiDropzoneSnackbar"
 })(SnackbarContentWrapper);
 

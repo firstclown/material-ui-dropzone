@@ -312,7 +312,7 @@ process.env.NODE_ENV !== "production" ? SnackbarContentWrapper.propTypes = {
   variant: PropTypes.oneOf(["success", "warning", "error", "info"]).isRequired
 } : void 0;
 SnackbarContentWrapper.displayName = "SnackbarContentWrapper";
-var SnackbarContentWrapper$1 = material.withStyles(styles$1, {
+var SnackbarContentWrapper$1 = material.styled(styles$1, {
   name: "MuiDropzoneSnackbar"
 })(SnackbarContentWrapper);
 
