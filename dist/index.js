@@ -18,7 +18,6 @@ var PropTypes = _interopDefault(require('prop-types'));
 var React = require('react');
 var Snackbar = _interopDefault(require('@mui/material/Snackbar'));
 var Typography = _interopDefault(require('@mui/material/Typography'));
-var withStyles = _interopDefault(require('@mui/styles/withStyles'));
 var AttachFileIcon = _interopDefault(require('@mui/icons-material/AttachFile'));
 var CloudUploadIcon = _interopDefault(require('@mui/icons-material/CloudUpload'));
 var clsx = _interopDefault(require('clsx'));
@@ -27,9 +26,9 @@ var Chip = _interopDefault(require('@mui/material/Chip'));
 var Fab = _interopDefault(require('@mui/material/Fab'));
 var Grid = _interopDefault(require('@mui/material/Grid'));
 var DeleteIcon = _interopDefault(require('@mui/icons-material/Delete'));
+var material = require('@mui/material');
 var IconButton = _interopDefault(require('@mui/material/IconButton'));
 var SnackbarContent = _interopDefault(require('@mui/material/SnackbarContent'));
-var material = require('@mui/material');
 var CheckCircleIcon = _interopDefault(require('@mui/icons-material/CheckCircle'));
 var CloseIcon = _interopDefault(require('@mui/icons-material/Close'));
 var ErrorIcon = _interopDefault(require('@mui/icons-material/Error'));
@@ -233,7 +232,7 @@ process.env.NODE_ENV !== "production" ? PreviewList.propTypes = {
   showFileNames: PropTypes.bool,
   useChipsForPreview: PropTypes.bool
 } : void 0;
-var PreviewList$1 = withStyles(styles, {
+var PreviewList$1 = material.styled(styles, {
   name: "MuiDropzonePreviewList"
 })(PreviewList);
 
@@ -932,7 +931,7 @@ process.env.NODE_ENV !== "production" ? DropzoneAreaBase.propTypes = {
    */
   onAlert: PropTypes.func
 } : void 0;
-var DropzoneAreaBase$1 = withStyles(styles$2, {
+var DropzoneAreaBase$1 = material.styled(styles$2, {
   name: "MuiDropzoneArea"
 })(DropzoneAreaBase);
 

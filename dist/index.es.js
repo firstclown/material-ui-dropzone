@@ -12,7 +12,6 @@ import PropTypes from 'prop-types';
 import { createElement, forwardRef, Fragment, PureComponent } from 'react';
 import Snackbar from '@mui/material/Snackbar';
 import Typography from '@mui/material/Typography';
-import withStyles from '@mui/styles/withStyles';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import clsx from 'clsx';
@@ -21,9 +20,9 @@ import Chip from '@mui/material/Chip';
 import Fab from '@mui/material/Fab';
 import Grid from '@mui/material/Grid';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { styled, withStyles } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import SnackbarContent from '@mui/material/SnackbarContent';
-import { withStyles as withStyles$1 } from '@mui/material';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CloseIcon from '@mui/icons-material/Close';
 import ErrorIcon from '@mui/icons-material/Error';
@@ -227,7 +226,7 @@ process.env.NODE_ENV !== "production" ? PreviewList.propTypes = {
   showFileNames: PropTypes.bool,
   useChipsForPreview: PropTypes.bool
 } : void 0;
-var PreviewList$1 = withStyles(styles, {
+var PreviewList$1 = styled(styles, {
   name: "MuiDropzonePreviewList"
 })(PreviewList);
 
@@ -307,7 +306,7 @@ process.env.NODE_ENV !== "production" ? SnackbarContentWrapper.propTypes = {
   variant: PropTypes.oneOf(["success", "warning", "error", "info"]).isRequired
 } : void 0;
 SnackbarContentWrapper.displayName = "SnackbarContentWrapper";
-var SnackbarContentWrapper$1 = withStyles$1(styles$1, {
+var SnackbarContentWrapper$1 = withStyles(styles$1, {
   name: "MuiDropzoneSnackbar"
 })(SnackbarContentWrapper);
 
@@ -926,7 +925,7 @@ process.env.NODE_ENV !== "production" ? DropzoneAreaBase.propTypes = {
    */
   onAlert: PropTypes.func
 } : void 0;
-var DropzoneAreaBase$1 = withStyles(styles$2, {
+var DropzoneAreaBase$1 = styled(styles$2, {
   name: "MuiDropzoneArea"
 })(DropzoneAreaBase);
 
